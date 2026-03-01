@@ -26,7 +26,7 @@ async def analyze_sentiment(request: UserRequest):
     try:
         # 4. Generate content using the new 'models' interface
         response = client.models.generate_content(
-            model="gemini-2.5-flash", 
+            model="gemini-2.5-flash-lite", 
             contents=f"Analyze the sentiment of this comment: {request.comment}",
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
